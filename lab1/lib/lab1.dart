@@ -17,6 +17,10 @@ double b2_CalculationFunction(String k,double a,double b)
       case '/':
          kq = a/b;
          break;
+      default:
+      print('Kí tự nhập phép toán chưa đúng, nhập lại !!!');
+      break;
+
      }
      return kq;
 }
