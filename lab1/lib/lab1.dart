@@ -101,5 +101,6 @@ print('+ Biến không bị hủy sau khi hàm kết thúc, biến chỉ bị h�
 convertDataTypes();
 
 print('Câu hỏi : làm sao để nhân hai số có giá trị lớn hơn 2^64 ?');
-print('Trả lời : :v chuyển kiểu dữ liệu của nó thành double.');
+print('Trả lời : tràn số, không thể nhân được');
+
 }
