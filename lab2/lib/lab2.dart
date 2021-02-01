@@ -1,3 +1,4 @@
+// nhập vào một giá trị là số nguyên dương ( chỉ nhận giá trị số nguyên dương ) và in ra kết quả.
 void b1_Input()
 {
   int nhap = 9;
@@ -9,8 +10,13 @@ void b1_Input()
   else
    print('Số được nhập phải là kiểu số nguyên.');
 }
+
+// Cho một giá trị n, khai báo và khởi tạo một mảng bao gồm n phần tử và in ra các phần tử trong mảng đó với n được 
+// nhập từ bàn phím
 List<int> number = [4,5,6,10,20,67,73,39,49,4,49,74,8,74];
 
+
+// tìm các giá trị lớn nhất, nhỏ nhất
 int b3_maxValue()
 { int max = 0;
   for (var i in number) {
@@ -31,6 +37,7 @@ int b3_minValue()
   return min;
 }
 
+// tìm các giá trị lớn nhất, nhỏ nhất
 List<int> b4_returnLocation(bool type)
 {
   List<int> kq = new List<int>();
@@ -53,6 +60,8 @@ List<int> b4_returnLocation(bool type)
   return kq;
 }
 
+// tính tổng các số là số chẵn, tính tổng các số là số lẻ. 
+// tìm các số lẻ, tìm các số chẵn
 int b5_sumOfEvenNumber()
 {
   int sum = 0;
@@ -73,6 +82,7 @@ int b5_sumOfOddNumber()
   return sum;
 }
 
+// tìm các số chia hết cho 5 và 2 trong mảng ngẫu nhiên các phần tử số nguyên và tính tổng
 int b6_sumOfTheNumbersDivisibleByFiveAndTwo()
 {
   int sum = 0;
@@ -83,6 +93,7 @@ int b6_sumOfTheNumbersDivisibleByFiveAndTwo()
   return sum;
 }
 
+// tính n giai thừa
 int b7_factorials(int n)
 {
   if(n==0 || n==1)
@@ -91,6 +102,7 @@ int b7_factorials(int n)
      return (b7_factorials(n-1)*n);
 }
 
+// tìm phần tử cuối cùng là số chẵn
 int b8_lastEvenElement()
 {
   int last;
@@ -101,6 +113,7 @@ int b8_lastEvenElement()
   return last;
 }
 
+// tìm phần tử cuối cùng là số lẻ
 int b9_lastOddElement()
 {
   int last;
@@ -111,6 +124,7 @@ int b9_lastOddElement()
   return last;
 }
 
+// nhập vào từ bàn phím một mảng các chuỗi, in ra thứ tự chuỗi trong mảng, giá trị của chuỗi, độ dài của chuỗi đó.
 List<String> str = ['sad','mad','crazy','upset'];
 void main(List<String> args) {
   b1_Input();
