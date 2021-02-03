@@ -1,6 +1,5 @@
 // nhập vào một giá trị là số nguyên dương ( chỉ nhận giá trị số nguyên dương ) và in ra kết quả.
-void b1_Input()
-{
+void b1_Input(){
   int nhap = 9;
   if( nhap is int)
     if(nhap >= 0)
@@ -17,8 +16,7 @@ List<int> number = [4,5,6,10,20,67,73,39,49,4,49,74,8,74];
 
 
 // tìm các giá trị lớn nhất, nhỏ nhất
-int b3_maxValue()
-{ int max = 0;
+int b3_maxValue(){ int max = 0;
   for (var i in number) {
     if(i > max)
        max = i;
@@ -27,8 +25,7 @@ int b3_maxValue()
 }
 
 
-int b3_minValue()
-{
+int b3_minValue(){
   int min = 1000000000;
   for (var i in number) {
     if(i<min)
@@ -38,33 +35,28 @@ int b3_minValue()
 }
 
 // tìm các giá trị lớn nhất, nhỏ nhất
-List<int> b4_returnLocation(bool type)
-{
+List<int> b4_returnLocation(bool type){
   List<int> kq = new List<int>();
   int max = b3_maxValue();
   int min = b3_minValue();
-  if(type)
-  {
+  
    for (var i = 0; i < number.length; i++) {
-    if(number[i] == b3_maxValue())
-      kq.add(i);
-  } 
-  }
-  else
-  {
-    for (var i = 0; i < number.length; i++) {
-    if(number[i] == b3_minValue())
-      kq.add(i);
-    } 
-  }
+     if(type){
+          if(number[i] == b3_maxValue())
+          kq.add(i);
+        }
+     else{
+          if(number[i] == b3_minValue())
+          kq.add(i);
+     }
+
   return kq;
 }
 
 // tính tổng các số là số chẵn, tính tổng các số là số lẻ. 
 // tìm các số lẻ, tìm các số chẵn
-int b5_sumOfEvenNumber()
-{
-  int sum = 0;
+int b5_sumOfEvenNumber(){
+    int sum = 0;
     for (var i in number) {
       if(i%2==0)
         sum += i;
@@ -72,8 +64,7 @@ int b5_sumOfEvenNumber()
     return sum;
 }
 
-int b5_sumOfOddNumber()
-{
+int b5_sumOfOddNumber(){
   int sum = 0;
   for (var i in number) {
     if(i%2==1)
@@ -83,8 +74,7 @@ int b5_sumOfOddNumber()
 }
 
 // tìm các số chia hết cho 5 và 2 trong mảng ngẫu nhiên các phần tử số nguyên và tính tổng
-int b6_sumOfTheNumbersDivisibleByFiveAndTwo()
-{
+int b6_sumOfTheNumbersDivisibleByFiveAndTwo(){
   int sum = 0;
   for (var i in number) {
     if(i%5==0 && i%2 == 0)
@@ -94,8 +84,7 @@ int b6_sumOfTheNumbersDivisibleByFiveAndTwo()
 }
 
 // tính n giai thừa
-int b7_factorials(int n)
-{
+int b7_factorials(int n){
   if(n==0 || n==1)
      return 1;
   else
@@ -103,8 +92,7 @@ int b7_factorials(int n)
 }
 
 // tìm phần tử cuối cùng là số chẵn
-int b8_lastEvenElement()
-{
+int b8_lastEvenElement(){
   int last;
   for (var i = 0; i < number.length; i++) {
     if(i%2==0);
@@ -114,8 +102,7 @@ int b8_lastEvenElement()
 }
 
 // tìm phần tử cuối cùng là số lẻ
-int b9_lastOddElement()
-{
+int b9_lastOddElement(){
   int last;
   for (var i = 0; i < number.length; i++) {
     if(i%2 == 1)
@@ -126,6 +113,7 @@ int b9_lastOddElement()
 
 // nhập vào từ bàn phím một mảng các chuỗi, in ra thứ tự chuỗi trong mảng, giá trị của chuỗi, độ dài của chuỗi đó.
 List<String> str = ['sad','mad','crazy','upset'];
+
 void main(List<String> args) {
   b1_Input();
  print('Các số trong mảng :');
