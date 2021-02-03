@@ -1,21 +1,20 @@
 import 'dart:io';
 import 'dart:math';
 
-double b2_CalculationFunction(String k,double a,double b)
-{
-  double kq;
+String b2_CalculationFunction(String k,double a,double b){
+String kq;
      switch (k) {
       case '+':
-         kq = a + b;
+         kq = (a + b).toString();
          break;
       case '-':
-        kq =  a - b;
+        kq =  (a - b).toString();
          break;
       case '*':
-        kq = a*b;
+        kq = (a*b).toString();
          break;
       case '/':
-         kq = a/b;
+         kq = (a/b).toString();
          break;
       default:
       print('Kí tự nhập phép toán chưa đúng, nhập lại !!!');
@@ -25,13 +24,11 @@ double b2_CalculationFunction(String k,double a,double b)
      return kq;
 }
 
-double b3_Math(double a,double b)
-{
+double b3_Math(double a,double b){
     return a*a + b;
 }
 
-int b4_DivisionInt(int a, int b)
-{
+int b4_DivisionInt(int a, int b){
   int c;
   c = (a~/b).toInt();
   return c;
@@ -39,8 +36,7 @@ int b4_DivisionInt(int a, int b)
 
 
 
- double b5_CalculationDifferentFromDataTypes(String k,int a,double b)
-{
+ double b5_CalculationDifferentFromDataTypes(String k,int a,double b){
   double kq;
      switch (k) {
       case '+':
@@ -59,8 +55,7 @@ int b4_DivisionInt(int a, int b)
      return kq;
 }
 
-void convertDataTypes()
-{
+void convertDataTypes(){
    int a;
    a = 10;
    double b;
@@ -79,8 +74,8 @@ double b = 10.55;
 
 double kq;
 
-
-kq = b2_CalculationFunction(k, a, b);
+String kqs;
+kqs = b2_CalculationFunction(k, a, b);
 print('Kết quả của phép tính $a $k $b là : $kq');
 
 double kq2;
