@@ -1,5 +1,5 @@
 // nhập vào một giá trị là số nguyên dương ( chỉ nhận giá trị số nguyên dương ) và in ra kết quả.
-void b1_Input(){
+void b1Input(){
   int nhap = 9;
   if( nhap is int)
     if(nhap >= 0)
@@ -25,7 +25,7 @@ int b3_maxValue(){ int max = 0;
 }
 
 
-int b3_minValue(){
+int b3MinValue(){
   int min = 1000000000;
   for (var i in number) {
     if(i<min)
@@ -35,10 +35,10 @@ int b3_minValue(){
 }
 
 // tìm các giá trị lớn nhất, nhỏ nhất
-List<int> b4_returnLocation(bool type){
+List<int> b4ReturnLocation(bool type){
   List<int> kq = new List<int>();
   int max = b3_maxValue();
-  int min = b3_minValue();
+  int min = b3MinValue();
   
    for (var i = 0; i < number.length; i++) {
      if(type){
@@ -46,7 +46,7 @@ List<int> b4_returnLocation(bool type){
           kq.add(i);
         }
      else{
-          if(number[i] == b3_minValue())
+          if(number[i] == b3MinValue())
           kq.add(i);
      }
      }
@@ -56,7 +56,7 @@ List<int> b4_returnLocation(bool type){
 
 // tính tổng các số là số chẵn, tính tổng các số là số lẻ. 
 // tìm các số lẻ, tìm các số chẵn
-int b5_sumOfEvenNumber(){
+int b5SumOfEvenNumber(){
     int sum = 0;
     for (var i in number) {
       if(i%2==0)
@@ -65,7 +65,7 @@ int b5_sumOfEvenNumber(){
     return sum;
 }
 
-int b5_sumOfOddNumber(){
+int b5SumOfOddNumber(){
   int sum = 0;
   for (var i in number) {
     if(i%2==1)
@@ -75,7 +75,7 @@ int b5_sumOfOddNumber(){
 }
 
 // tìm các số chia hết cho 5 và 2 trong mảng ngẫu nhiên các phần tử số nguyên và tính tổng
-int b6_sumOfTheNumbersDivisibleByFiveAndTwo(){
+int b6SumOfTheNumbersDivisibleByFiveAndTwo(){
   int sum = 0;
   for (var i in number) {
     if(i%5==0 && i%2 == 0)
@@ -85,15 +85,15 @@ int b6_sumOfTheNumbersDivisibleByFiveAndTwo(){
 }
 
 // tính n giai thừa
-int b7_factorials(int n){
+int b7Factorials(int n){
   if(n==0 || n==1)
      return 1;
   else
-     return (b7_factorials(n-1)*n);
+     return (b7Factorials(n-1)*n);
 }
 
 // tìm phần tử cuối cùng là số chẵn
-int b8_lastEvenElement(){
+int b8LastEvenElement(){
   int last;
   for (var i = 0; i < number.length; i++) {
     if(i%2==0);
@@ -103,7 +103,7 @@ int b8_lastEvenElement(){
 }
 
 // tìm phần tử cuối cùng là số lẻ
-int b9_lastOddElement(){
+int b9LastOddElement(){
   int last;
   for (var i = 0; i < number.length; i++) {
     if(i%2 == 1)
@@ -116,24 +116,24 @@ int b9_lastOddElement(){
 List<String> str = ['sad','mad','crazy','upset'];
 
 void main(List<String> args) {
-  b1_Input();
+  b1Input();
  print('Các số trong mảng :');
  // number.forEach(print);
  for (var i = 0; i <number.length ; i++) {
    print(number[i]); }
   int c = b3_maxValue();
   print('Số lớn nhất trong mảng là : $c');
-  int d = b3_minValue();
+  int d = b3MinValue();
   print('Số nhỏ nhất trong mảng là : $d');
 
-   var kq = b4_returnLocation(true).toString();
+   var kq = b4ReturnLocation(true).toString();
   print('Số lớn nhất nằm ở vị trí : $kq');
-    kq = b4_returnLocation(false).toString();
+    kq = b4ReturnLocation(false).toString();
   print('Số nhỏ nhất nằm ở vị trí : $kq');
 
-   int kq2 = b5_sumOfEvenNumber();
+   int kq2 = b5SumOfEvenNumber();
   print('Tổng các số chẵn trong mảng là : $kq2');
-  kq2 = b5_sumOfOddNumber();
+  kq2 = b5SumOfOddNumber();
   print('Tổng các số lẻ trong mảng là : $kq2');
   
   var even = number.where((n) => n%2 == 0).toList();
@@ -144,16 +144,16 @@ void main(List<String> args) {
 
   var divisible = number.where((e) => (e%5 == 0 && e%2 == 0)).toList();
   print('Các số chia hết cho 5 và chia hết cho 2 là : $divisible');
-  kq2 = b6_sumOfTheNumbersDivisibleByFiveAndTwo();
+  kq2 = b6SumOfTheNumbersDivisibleByFiveAndTwo();
   print('Tổng của các số chia hết cho 5 và chia hết cho 2 là : $kq2');
 
   int factorials = 15;
-  int kqfac = b7_factorials(factorials);
+  int kqfac = b7Factorials(factorials);
   print('Giai thừa của $factorials là : $kqfac');
 
-  int vt = b8_lastEvenElement();
+  int vt = b8LastEvenElement();
   print('Số chẵn nằm vị trí cuối cùng trong mảng là : $vt');
-   vt = b9_lastOddElement();
+   vt = b9LastOddElement();
   print('Số lẻ nằm vị trí cuối cùng trong mảng là : $vt');
 
   for (var i = 0; i < str.length; i++) {
