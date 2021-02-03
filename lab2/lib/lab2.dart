@@ -16,7 +16,8 @@ List<int> number = [4,5,6,10,20,67,73,39,49,4,49,74,8,74];
 
 
 // tìm các giá trị lớn nhất, nhỏ nhất
-int b3_maxValue(){ int max = 0;
+int b3_maxValue(){ 
+  int max = 0;
   for (var i in number) {
     if(i > max)
        max = i;
