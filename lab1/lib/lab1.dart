@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:math';
 
-String b2_CalculationFunction(String k,double a,double b){
+String b2CalculationFunction(String k,double a,double b){
 String kq;
      switch (k) {
       case '+':
@@ -24,11 +24,11 @@ String kq;
      return kq;
 }
 
-double b3_Math(double a,double b){
+double b3Math(double a,double b){
     return a*a + b;
 }
 
-int b4_DivisionInt(int a, int b){
+int b4DivisionInt(int a, int b){
   int c;
   c = (a~/b).toInt();
   return c;
@@ -36,7 +36,7 @@ int b4_DivisionInt(int a, int b){
 
 
 
- double b5_CalculationDifferentFromDataTypes(String k,int a,double b){
+ double b5CalculationDifferentFromDataTypes(String k,int a,double b){
   double kq;
      switch (k) {
       case '+':
@@ -55,7 +55,7 @@ int b4_DivisionInt(int a, int b){
      return kq;
 }
 
-void convertDataTypes(){
+void b6convertDataTypes(){
    int a;
    a = 10;
    double b;
@@ -75,19 +75,19 @@ double b = 10.55;
 double kq;
 
 String kqs;
-kqs = b2_CalculationFunction(k, a, b);
+kqs = b2CalculationFunction(k, a, b);
 print('Kết quả của phép tính $a $k $b là : $kq');
 
 double kq2;
-kq2 = b3_Math(a, b);
+kq2 = b3Math(a, b);
 print('Kết quả của phép tính a*a + b, với a = $a và b = $b là : $kq2');
 int kq3;
-kq3 = b4_DivisionInt(a.toInt(), b.toInt());
+kq3 = b4DivisionInt(a.toInt(), b.toInt());
 print('Kết quả của phép tính a/b (trả về kiểu số nguyên), với a = $a, b = $b là : $kq3');
 print('Kết luận phép tính a/b trả về loại int, là nó chỉ lấy phần nguyên và không làm tròn phần dư.');
 
 double kq4;
-kq4 = b5_CalculationDifferentFromDataTypes(k, a.toInt(), b);
+kq4 = b5CalculationDifferentFromDataTypes(k, a.toInt(), b);
 print('Kết quả của phép tính ${a.toInt()} $k $b là : $kq4');
 
 print('So sánh sự khác nhau giữa biến toàn cục và biến cục bộ !');
@@ -97,7 +97,7 @@ print('- Biến toàn cục: \n+ Được khai báo ngoài hàm, có thể đư�
 print('+ Giá trị của biến được sử dụng chung cho tất cả các hàm, nếu truyền biến vào hàm bằng cách truyền tham chiếu thì giá trị của biến sẽ thay đổi. ');
 print('+ Biến không bị hủy sau khi hàm kết thúc, biến chỉ bị hủy khi chương trình đã dừng.');
 
-convertDataTypes();
+b6convertDataTypes();
 
 print('Câu hỏi : làm sao để nhân hai số có giá trị lớn hơn 2^64 ?');
 print('Trả lời : tràn số, không thể nhân được');
