@@ -49,6 +49,7 @@ List<int> b4_returnLocation(bool type){
           if(number[i] == b3_minValue())
           kq.add(i);
      }
+     }
 
   return kq;
 }
