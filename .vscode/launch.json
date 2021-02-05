@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
 
         {
             "name": "lab1",
@@ -14,10 +15,18 @@
         },
         {
             "name": "lab2",
-            "program": "lib\\lab2.dart",
+           // "program": "lib\\lab2.dart",
             "cwd": "lab2",
             "request": "launch",
             "type": "dart"
-        }
+        },
+        {
+            "name": "lab3",
+           "program": "lib\\lab3.dart",
+            "cwd": "lab3",
+            "request": "launch",
+            "type": "dart"
+        },
+
     ]
 }
