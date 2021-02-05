@@ -8,6 +8,7 @@ double b1CalculatedRecursively(int n){
     return ((b1CalculatedRecursively(n-1))+(1/pow(n, 3)));
 
 }
+//
 
 // tính kết qyar của phép toán sau : 1 + 2/3 + 2/3 * 4/5 + 2/3 * 4/5 * 6/7 + ... + 2/3 * 4/5 * 6/7 * 8/9 *....* 2(n+1)/(2n + 3)
 double test(int n){
