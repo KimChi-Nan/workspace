@@ -12,7 +12,7 @@ void b1Input(){
 
 // Cho một giá trị n, khai báo và khởi tạo một mảng bao gồm n phần tử và in ra các phần tử trong mảng đó với n được 
 // nhập từ bàn phím
-List<int> number = [4,5,6,10,20,67,73,39,49,4,49,74,8,74];
+List<int> number = [4,5,6,10,20,67,73,39,49,4,49,74,8,74,73];
 
 
 // tìm các giá trị lớn nhất, nhỏ nhất
@@ -44,12 +44,12 @@ List<int> b4ReturnLocation(bool type){
    for (var i = 0; i < number.length; i++) {
      if(type){
           if(number[i] == b3_maxValue())
-          kq.add(i);
+           kq.add(i);
         }
      else{
           if(number[i] == b3MinValue())
-          kq.add(i);
-     }
+           kq.add(i);
+        }
      }
 
   return kq;
@@ -96,19 +96,23 @@ int b7Factorials(int n){
 // tìm phần tử cuối cùng là số chẵn
 int b8LastEvenElement(){
   int last;
-  for (var i = 0; i < number.length; i++) {
-    if(i%2==0);
+  for (var i = number.length - 1; i >= 0; i--) {
+    if(number[i]%2 == 0){
      last = number[i];
+     break;
+     }
   }
   return last;
 }
 
 // tìm phần tử cuối cùng là số lẻ
 int b9LastOddElement(){
-  int last;
-  for (var i = 0; i < number.length; i++) {
-    if(i%2 == 1)
-    last = number[i];
+  int last = 0;
+  for (var i = number.length - 1; i >= 0; i--) {
+    if( (number[i] % 2) == 1){
+     last = number[i];
+     break;
+     }
   }
   return last;
 }
@@ -154,7 +158,7 @@ void main(List<String> args) {
 
   int vt = b8LastEvenElement();
   print('Số chẵn nằm vị trí cuối cùng trong mảng là : $vt');
-   vt = b9LastOddElement();
+  vt = b9LastOddElement();
   print('Số lẻ nằm vị trí cuối cùng trong mảng là : $vt');
 
   for (var i = 0; i < str.length; i++) {

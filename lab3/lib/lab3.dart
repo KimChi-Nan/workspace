@@ -11,19 +11,17 @@ double b1CalculatedRecursively(int n){
 //
 
 // tính kết qyar của phép toán sau : 1 + 2/3 + 2/3 * 4/5 + 2/3 * 4/5 * 6/7 + ... + 2/3 * 4/5 * 6/7 * 8/9 *....* 2(n+1)/(2n + 3)
-double test(int n){
+double recursive(int n){
   if(n == 1)
     return ((2/3)*(4/5));
   else
-    return (test(n-1)*((2*(n+1))/(2*n+3)));
+    return (recursive(n-1)*((2*(n+1))/(2*n+3)));
 }
-double b2CalculatedRecursively2(int n){
-  double kq = 0;
-  double j = 1 + 2/3;
 
-  kq = j;
+double b2CalculatedRecursively2(int n){
+  double kq = 1 + 2/3;
      for (var i = 1; i <= n; i++) {
-         kq += test(i);
+         kq += recursive(i);
      }
      return kq;
 }
